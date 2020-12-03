@@ -4,42 +4,644 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beginner Tailwind</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   </head>
 
   <body class="">
-    <!-- header/navigation -->
-    <div class="text-gray-600">
-      <div class="container mx-auto flex justify-between px-6 lg:px-0 py-6">
-        <!-- left -->
-        <div class="flex items-center space-x-4">
-          <a href="#" class="font-bold text-2xl text-teal-800">Beginner Tailwind</a>
-          <a href="#" class="hidden lg:inline-block hover:text-gray-800">About</a>
-          <a href="#" class="hidden lg:inline-block hover:text-gray-800">What You'll Learn</a>
-          <a href="#" class="hidden lg:inline-block hover:text-gray-800">Price</a>
-          <a href="#" class="hidden lg:inline-block hover:text-gray-800">FAQ</a>
+    <div class="bg-gradient-to-br from-gray-100 to-gray-300">
+      <!-- left circle decoration -->
+      <div class="absolute top-0 left-0 transform translate-x-4 translate-y-4 ">
+        <div class="absolute bg-gradient-to-br from-teal-100 from-teal-200 w-64 h-64 rounded-full opacity-50"></div>
+        <div class="absolute ml-10 mt-10 bg-gradient-to-br from-purple-100 from-purple-200 w-64 h-64 rounded-full opacity-50"></div>
+        <div class="absolute ml-24 bg-gradient-to-br from-red-100 from-red-200 w-64 h-64 rounded-full opacity-50"></div>
+      </div>
+      <!-- right circle decoration -->
+      <div class="hidden lg:block absolute top-0 right-0 mr-48 transform -translate-x-64 translate-y-64">
+        <div class="absolute bg-gradient-to-br from-teal-100 from-teal-200 w-64 h-64 rounded-full opacity-50"></div>
+        <div class="absolute ml-10 mt-10 bg-gradient-to-br from-purple-100 from-purple-200 w-64 h-64 rounded-full opacity-50">
         </div>
-        <!-- right -->
-        <div class="flex items-center space-x-4">
-          <a href="#" class="hover:text-gray-900">Login</a>
-          <a href="#" class="hidden lg:inline-block p-3 bg-purple-300 hover:bg-purple-200 text-purple-700 hover:text-purple-600 rounded shadow hover:shadow-xl transition duration-500">Get the Course</a>
+        <div class="absolute ml-24 bg-gradient-to-br from-red-100 from-red-200 w-64 h-64 rounded-full opacity-50"></div>
+      </div>
+
+      <!-- header/navigation -->
+      <div class="relative text-gray-600">
+        <div class="container mx-auto flex justify-between px-10 py-6">
+          <!-- left -->
+          <div class="flex items-center space-x-4">
+            <a href="#" class="font-bold text-2xl text-teal-800">Beginner Tailwind</a>
+            <a href="#about" class="hidden lg:inline-block hover:text-gray-800">About</a>
+            <a href="#learn" class="hidden lg:inline-block hover:text-gray-800">What You'll Learn</a>
+            <a href="#pricing" class="hidden lg:inline-block hover:text-gray-800">Price</a>
+            <a href="#faq" class="hidden lg:inline-block hover:text-gray-800">FAQ</a>
+          </div>
+          <!-- right -->
+          <div class="flex items-center space-x-4">
+            <a href="#" class="hover:text-gray-900">Login</a>
+            <a href="#" class="hidden lg:inline-block p-3 bg-purple-300 hover:bg-purple-200 text-purple-700 hover:text-purple-600 rounded shadow hover:shadow-xl transition duration-500">Get the Course</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- hero section -->
+      <div class="relative">
+        <!-- purple bar to help with the section transiiton-->
+        <div class="absolute bottom-0 inset-x-0 h-64 bg-purple-700"></div>
+        
+        <div class="container mx-auto px-10 py-24 text-center">
+          <h1 class="mb-4 text-4xl lg:text-6xl font-extrabold">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-500">Beginner </span>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-purple-600 to-purple-500">Tailwind</span>
+          </h1>
+          <p class="mb-8 text-lg lg:text-2xl text-gray-700">Make good looking designs quickly.  All without a single line of custom CSS.</p>
+          <a href="#" class="inline-block mb-16 lg:mb-32 py-3 px-12 rounded bg-gradient-to-br from-purple-500 to-purple-700 hover:to-purple-600 text-purple-100 hover:text-white shadow-l hover:shadow-2xl font-bold text-lg tracking-wide transition duration-500">Get the Course</a>
+          
+          <div class="relative">
+            <img src="https://i.imgur.com/wysbBMS.png" alt="Teaser Image" class="rounded-lg shadow-2xl border-4 border-purple-400" />
+            <div class="lg:absolute top-0 right-0 bg-yellow-100 lg:transform translate-x-4 -translate-y-4 text-left py-4 px-8 mt-8 lg:mt-0 rounded shadow-lg text-yellow-800 border-t-4 border-yellow-500">
+              <p><strong class="font-bold">We'll create BeginnerTailwind.com</strong> <span class="opacity-50">(it's the site you're on now)</span></p>
+              <p>We'll do it all without a single line of custom CSS!</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- hero section -->
-
     <!-- overview -->
+    <div id="about" class="relative bg-purple-700 pt-0 lg:pt-12 pb-24">
+      <!-- grey bar to help with section transition -->
+      <div class="absolute bottom-0 inset-x-0 h-64 bg-gray-300"></div>
+
+      <div class="relative container mx-auto px-10">
+        <h2 class="mb-10 text-4xl lg:text-6xl font-bold text-purple-100">Writing CSS is tough stuff!</h2>
+        <div class="lg:flex lg:space-x-16 space-y-8 lg:space-y-0">
+          <!-- left column -->
+          <div class="lg:w-2/3 bg-white p-12 lg:p-16 rounded shadow-2xl text-gray-800 text-lg space-y-8 leading-relaxed">
+            <p>Tailwind makes writing CSS easier and lets us customize our designs faster than any other CSS framework. If you want a
+            CSS framework that has pre-built components, then Tailwind may not be for you. If you want a CSS framework that lets you
+            design quickly and customize your site, then <strong class="font-bold text-teal-500">Tailwind is gonna be a lot of fun</strong>.</p>
+            <p>After using Bulma to build <a href="https://scotch.io" class="text-blue-500 hover:underline">Scotch.io</a>, my CSS files became littered with my own <code class="inline-block px-1 rounded bg-gray-200 text-red-700 text-xs font-mono">!important</code> classes to override the
+            framework's styles. Tailwind doesn't have the <code class="inline-block px-1 rounded bg-gray-200 text-red-700 text-xs font-mono">!important</code> problem since all our elements are designed on the fly.</p>
+            <p><strong class="font-bold">Important Note:</strong> Tailwind lets us design quickly, but this doesn't mean that you don't need CSS knowledge however. To use
+            Tailwind, you need to have a good understanding of CSS properties. In this course, we will learn Tailwind and we'll also
+            learn CSS concepts to create good looking designs. <strong class="font-bold">Tailwind is the ultimate CSS shorthand</strong>, but we still need to learn
+            the CSS, which we'll do in this course.</p>
+            <p class="relative text-3xl italic"><span class="absolute top-0 left-0 transform -translate-x-6 -translate-y-6 scale-150 text-purple-600 text-6xl opacity-50">"</span>This isn't just a Tailwind course. This is also a "learn how to design with CSS" course.</p>
+            <p>The hardest things about learning Tailwind is memorizing the classes and also knowing which classes go well together.
+            We'll be writing a lot of Tailwind in this course so that the repetition will help us commit Tailwind classes to memory.</p>
+          </div>
+          <!-- right column -->
+          <div class="flex-grow space-y-4 text-lg italic">
+            <div class="p-10 rounded-lg text-purple-100 bg-purple-900">What classes should I use?</div>
+            <div class="p-10 rounded-lg text-purple-100 bg-purple-900">How do I make things look good?</div>
+            <div class="p-10 rounded-lg text-purple-100 bg-purple-900">My design looks basic?</div>
+            <div class="p-10 rounded-lg text-purple-100 bg-purple-900">How do I do responsive?</div>
+            <div class="p-10 rounded-lg text-purple-100 bg-purple-900">Why does my typography look so bad?</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- about me -->
+    <div class="lg:pt-12 pb-24 bg-gray-300 lg:text-center">
+      <div class="container mx-auto px-10">
+        <h2 class="mb-3 text-3xl lg:text-6xl font-bold text-teal-900">Some Tailwind Beginner Videos</h2>
+          <p class="lg:text-xl mb-12 leading-loose">
+            Hey there! My name is <a href="https://twitter.com/chrisoncode" class="text-blue-500 hover:underline">Chris on Code</a> and I founded a web dev tutorial site <a href="https://scotch.io/" class="text-blue-500 hover:underline">Scotch.io</a>
+            . We were able to grow to 4M monthly pageviews and $300,000 yearly revenue. Scotch.io was acquired by <a href="https://www.digitalocean.com/" class="text-blue-500 hover:underline">DigitalOcean</a> in November 2019. Nowadays I'm in search of the best ways to develop and design a business. Hope you enjoy this course and my other one <a href="https://makereactapps.com/" class="text-blue-500 hover:underline">MakeReactApps.com</a>.
+        </p>
+
+        <!--videos-->
+        <div class="lg:flex lg:space-x-8 text-left space-y-8 lg:space-y-0">
+          <div class="lg:flex lg:space-x-8 space-y-8 lg:space-y-0">
+            <div class="lg:w-1/2 flex flex-col justify-between rounded bg-white border-2 border-gray-700">
+              <p class="p-8">
+                I have a Getting started with Tailwind article on
+                <a href="https://scotch.io/tutorials/get-started-with-tailwind-css-in-15-minutes"
+                  class="text-blue-500 hover:underline">scotch.io</a>
+                and a
+                <a href="" class="text-blue-500 hover:underline">15 minute starter YouTube video</a>
+                .
+              </p>
+              <iframe class="w-full rounded-b" height="400" src="https://www.youtube.com/embed/6zIuAyLZPH0" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            </div>
+            <div class="lg:w-1/2 flex flex-col justify-between rounded bg-white border-2 border-gray-700">
+              <p class="p-8">
+                I did a Build Your 1st Tailwind Site for
+                <a href="https://www.youtube.com/user/TechGuyWeb" class="text-blue-500 hover:underline">Traversy Media</a>
+                on YouTube also.
+              </p>
+              <iframe class="w-full rounded-b" height="400" src="https://www.youtube.com/embed/NRagrTU_v8o" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- what you'll learn -->
+    <div id="learn" class="py-32 bg-gray-200 text-gray-700">
+      <div class="container mx-auto px-10">
+        <!--header-->
+        <div class="relative">
+          <h2 class="mb-24 text-4xl lg:text-6xl text-center font-bold text-purple-900">What you'll learn in this course</h2>
+          <div class="absolute top-0 left-0 w-1/3 h-2 rounded bg-gradient-to-r from-blue-400 to-purple-400 transform -translate-y-4"></div>
+          <div class="absolute bottom-0 right-0 w-1/3 h-2 rounded bg-gradient-to-r from-purple-400 to-blue-400 transform translate-y-4"></div>
+        </div>
+        
+        <!--grid-->
+        <div class="lg:grid grid-cols-6 gap-10 space-y-8 lg:space-y-0">
+          <div class="col-span-2 border border-gray-700 rounded shadow-lg">
+            <div class="p-4 flex items-center justify-between border-b border-gray-700">
+              <h3 class="font-bold text-lg">How to Use Tailwind classes</h3>
+              <div class="flex space-x-2">
+                <div class="w-3 h-3 rounded bg-red-500"></div>
+                <div class="w-3 h-3 rounded bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded bg-green-500"></div>
+              </div>
+            </div>
+            
+            <p class="p-4">We'll dive into the most important Tailwind classes and use them a TON.</p>
+          </div>
+          <div class="col-span-2 border border-gray-700 rounded shadow-lg">
+            <div class="p-4 flex items-center justify-between border-b border-gray-700">
+              <h3 class="font-bold text-lg">How to Use Tailwind classes</h3>
+              <div class="flex space-x-2">
+                <div class="w-3 h-3 rounded bg-red-500"></div>
+                <div class="w-3 h-3 rounded bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded bg-green-500"></div>
+              </div>
+            </div>
+            <p class="p-4">We'll dive into the most important Tailwind classes and use them a TON.</p>
+          </div>
+          <div class="col-span-2 border border-gray-700 rounded shadow-lg">
+            <div class="p-4 flex items-center justify-between border-b border-gray-700">
+              <h3 class="font-bold text-lg">How to Use Tailwind classes</h3>
+              <div class="flex space-x-2">
+                <div class="w-3 h-3 rounded bg-red-500"></div>
+                <div class="w-3 h-3 rounded bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded bg-green-500"></div>
+              </div>
+            </div>
+            <p class="p-4">We'll dive into the most important Tailwind classes and use them a TON.</p>
+          </div>
+          <div class="col-span-3 border border-gray-700 rounded shadow-lg">
+            <div class="p-4 flex items-center justify-between border-b border-gray-700">
+              <h3 class="font-bold text-lg">How to Use Tailwind classes</h3>
+              <div class="flex space-x-2">
+                <div class="w-3 h-3 rounded bg-red-500"></div>
+                <div class="w-3 h-3 rounded bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded bg-green-500"></div>
+              </div>
+            </div>
+            <p class="p-4">We'll dive into the most important Tailwind classes and use them a TON.</p>
+          </div>
+          <div class="col-span-3 border border-gray-700 rounded shadow-lg">
+            <div class="p-4 flex items-center justify-between border-b border-gray-700">
+              <h3 class="font-bold text-lg">How to Use Tailwind classes</h3>
+              <div class="flex space-x-2">
+                <div class="w-3 h-3 rounded bg-red-500"></div>
+                <div class="w-3 h-3 rounded bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded bg-green-500"></div>
+              </div>
+            </div>
+            <p class="p-4">We'll dive into the most important Tailwind classes and use them a TON.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- what we'll build -->
+    <div class="py-24 bg-gray-300 text-gray-600">
+      <div class="container mx-auto px-10">
+        <div class="mb-8 text-center">
+          <h2 class="mb-2 text-5xl text-gray-800">What we'll build in this course</h2>
+          <p class="text-lg text-gray-700">These components are things you'll have to create in every project.</p>
+        </div>  
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="flex bg-white rounded shadow">
+            <div class="w-1/5 flex items-center justify-center text-3xl bg-red-500 rounded-l">😍</div>
+            <div class="p-4">Buttons</div>
+          </div>
+          <div class="flex bg-white rounded shadow">
+            <div class="w-1/5 flex items-center justify-center text-3xl bg-blue-500 rounded-l">😍</div>
+            <div class="p-4">Cards</div>
+          </div>
+          <div class="flex bg-white rounded shadow">
+            <div class="w-1/5 flex items-center justify-center text-3xl bg-green-500 rounded-l">😍</div>
+            <div class="p-4">Forms</div>
+          </div>
+          <div class="flex bg-white rounded shadow">
+            <div class="w-1/5 flex items-center justify-center text-3xl bg-purple-500 rounded-l">😍</div>
+            <div class="p-4">Header</div>
+          </div>
+          <div class="flex bg-white rounded shadow">
+            <div class="w-1/5 flex items-center justify-center text-3xl bg-red-500 rounded-l">😍</div>
+            <div class="p-4">Buttons</div>
+          </div>
+          <div class="flex bg-white rounded shadow">
+            <div class="w-1/5 flex items-center justify-center text-3xl bg-blue-500 rounded-l">😍</div>
+            <div class="p-4">Cards</div>
+          </div>
+          <div class="flex bg-white rounded shadow">
+            <div class="w-1/5 flex items-center justify-center text-3xl bg-green-500 rounded-l">😍</div>
+            <div class="p-4">Forms</div>
+          </div>
+          <div class="flex bg-white rounded shadow">
+            <div class="w-1/5 flex items-center justify-center text-3xl bg-purple-500 rounded-l">😍</div>
+            <div class="p-4">Header</div>
+          </div>
+        </div>  
+      </div>
+    </div>
+
+    <!-- pricing -->
+    <div id="pricing" class="relative bg-blue-600 py-32 text-blue-100">
+      <!--grey box for the top section -->
+      <div class="absolute top-0 inset-x-0 h-48 bg-gray-300"></div>
+
+      <div class="container mx-auto px-10 flex flex-col lg:flex-row items-center lg:space-x-8 space-y-4 lg:space-y-0">
+        <!--left-->
+        <div class="order-2 lg:order-1 lg:w-1/3 pt-12 text-center lg:text-right space-y-2 text-xl">
+          <p><strong class="font-bold text-white">75 videos</strong> at a smooth pace</p>
+          <p><strong class="font-bold text-white">9.25 hours</strong> of learning + building</p>
+          <p><strong class="font-bold text-white">Source code</strong> and CodePens</p>
+        </div>
+
+        <!--pricing box-->
+        <div class="order-1 lg:order-2 relative w-full lg:w-1/3 bg-white p-8 text-gray-800 rounded shadow-2xl border-8 border-purple-700 text-center space-y-4 transform hover:scale-105 transition duration-500">
+          <!-- show off beam thingy-->
+          <div class="absolute top-0 inset-x-0 transform -translate-y-full flex items-end justify-center space-x-8">
+            <div class="w-2 h-16 mb-8 bg-red-500 rounded transform -rotate-45 origin-bottom"></div>
+            <div class="w-2 h-24 mb-8 bg-yellow-500 rounded"></div>
+            <div class="w-2 h-16 mb-8 bg-green-500 rounded transform rotate-45 origin-bottom"></div>
+          </div>
+
+          <h4 class="text-gray-600 text-sm">Start Tailwind<span class="italic">-ing!</span></h4>
+          <div class="text-6xl text-purple-800 font-bold"><span class="opacity-25">$</span>47</div>
+          <a href="https://beginnertailwind.com" class="block p-3 bg-gradient-to-br from-yellow-400 via-yellow-500 to-orange-400 transition duration-300 text-yellow-800 hover:text-yellow-900 rounded shadow hover-shadow-2xl">Buy the Course</a>
+        </div>
+
+        <!--right-->
+        <div class="order-3 lg:w-1/3 pt-12 text-center lg:text-left space-y-2 text-lg">
+          <p>Use the code <strong class="font-bold text-white">in your projects</strong></p>
+          <p>Access to <strong class="font-bold text-white">Discord</strong> for support</p>
+          <p><strong class="font-bold text-white">Lifetime</strong> refund guarantee</p>
+        </div>
+      </div>
+    </div>
 
     <!-- faq -->
+    <div id="faq" class="bg-gray-800 py-32 text-gray-400">
+      <div class="container mx-auto px-10">
+        <h2 class="mb-12 text-3xl text-center font-bold">Frequently Asked Questions</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
+          <!-- question -->
+          <div class="p-8 border-2 border-gray-500 rounded-lg">
+            <h3 class="mb-3 text-gray-200 font-bold text-xl">Do I need to know CSS?</h3>
+            <p>This course is aimed at people that have some CSS knowledge and want to learn Tailwind. I do talk through CSS concepts and why we're using certain classes all throughout the course so you don't need to be a CSS expert.</p>
+          </div>
+          <!-- question -->
+          <div class="p-8 border-2 border-gray-500 rounded-lg">
+            <h3 class="mb-3 text-gray-200 font-bold text-xl">Is there course support?</h3>
+            <p>You can email me directly at any time and we also have a <a href="#" class="text-blue-500 hover:underline">Discord community</a> where you gain exclusive channel access.</p>
+          </div>
+          <!-- question -->
+          <div class="p-8 border-2 border-gray-500 rounded-lg">
+            <h3 class="mb-3 text-gray-200 font-bold text-xl">Do I need to know CSS?</h3>
+            <p>This course is aimed at people that have some CSS knowledge and want to learn Tailwind. I do talk through CSS
+              concepts and why we're using certain classes all throughout the course so you don't need to be a CSS expert.</p>
+          </div>
+          <!-- question -->
+          <div class="p-8 border-2 border-gray-500 rounded-lg">
+            <h3 class="mb-3 text-gray-200 font-bold text-xl">Is there course support?</h3>
+            <p>You can email me directly at any time and we also have a <a href="#" class="text-blue-500 hover:underline">Discord
+                community</a> where you gain exclusive channel access.</p>
+          </div>
+          <!-- question -->
+          <div class="p-8 border-2 border-gray-500 rounded-lg">
+            <h3 class="mb-3 text-gray-200 font-bold text-xl">Do I need to know CSS?</h3>
+            <p>This course is aimed at people that have some CSS knowledge and want to learn Tailwind. I do talk through CSS
+              concepts and why we're using certain classes all throughout the course so you don't need to be a CSS expert.</p>
+          </div>
+          <!-- question -->
+          <div class="p-8 border-2 border-gray-500 rounded-lg">
+            <h3 class="mb-3 text-gray-200 font-bold text-xl">Is there course support?</h3>
+            <p>You can email me directly at any time and we also have a <a href="#" class="text-blue-500 hover:underline">Discord
+                community</a> where you gain exclusive channel access.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- typography test -->
+      <div class="py-24 bg-gray-100">
+          <div class="container mx-auto p-10">
+            <div class="prose prose-sm sm:prose lg:prose-lg mx-auto">
+              <p class="lead">Until now, trying to style an article, document, or blog post with Tailwind has been a tedious task
+                that required a keen eye for typography and a lot of complex custom CSS.</p>
+              <p>By default, Tailwind removes all of the default browser styling from paragraphs, headings, lists and more. This
+                ends up being really useful for building application UIs because you spend less time undoing user-agent styles, but
+                when you <em>really are</em> just trying to style some content that came from a rich-text editor in a CMS or a
+                markdown file, it can be surprising and unintuitive.</p>
+              <p>We get lots of complaints about it actually, with people regularly asking us things like:</p>
+              <blockquote>
+                <p>Why is Tailwind removing the default styles on my <code>h1</code> elements? How do I disable this? What do you
+                  mean I lose all the other base styles too?</p>
+              </blockquote>
+              <p>We hear you, but we're not convinced that simply disabling our base styles is what you really want. You don't want
+                to have to remove annoying margins every time you use a <code>p</code> element in a piece of your dashboard UI. And
+                I doubt you really want your blog posts to use the user-agent styles either — you want them to look
+                <em>awesome</em>, not awful.</p>
+              <p>The <code>@tailwindcss/typography</code> plugin is our attempt to give you what you <em>actually</em> want, without
+                any of the downsides of doing something stupid like disabling our base styles.</p>
+              <p>It adds a new <code>prose</code> class that you can slap on any block of vanilla HTML content and turn it into a
+                beautiful, well-formatted document:</p>
+              <pre><code class="language-html">&lt;article class="prose"&gt;
+              &lt;h1&gt;Garlic bread with cheese: What the science tells us&lt;/h1&gt;
+              &lt;p&gt;
+                For years parents have espoused the health benefits of eating garlic bread with cheese to their
+                children, with the food earning such an iconic status in our culture that kids will often dress
+                up as warm, cheesy loaf for Halloween.
+              &lt;/p&gt;
+              &lt;p&gt;
+                But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
+                springing up around the country.
+              &lt;/p&gt;
+              &lt;!-- ... --&gt;
+            &lt;/article&gt;
+            </code></pre>
+              <p>For more information about how to use the plugin and the features it includes, <a
+                  href="https://github.com/tailwindcss/typography/blob/master/README.md">read the documentation</a>.</p>
+              <hr>
+              <h2>What to expect from here on out</h2>
+              <p>What follows from here is just a bunch of absolute nonsense I've written to dogfood the plugin itself. It includes
+                every sensible typographic element I could think of, like <strong>bold text</strong>, unordered lists, ordered
+                lists, code blocks, block quotes, <em>and even italics</em>.</p>
+              <p>It's important to cover all of these use cases for a few reasons:</p>
+              <ol>
+                <li>We want everything to look good out of the box.</li>
+                <li>Really just the first reason, that's the whole point of the plugin.</li>
+                <li>Here's a third pretend reason though a list with three items looks more realistic than a list with two items.
+                </li>
+              </ol>
+              <p>Now we're going to try out another header style.</p>
+              <h3>Typography should be easy</h3>
+              <p>So that's a header for you — with any luck if we've done our job correctly that will look pretty reasonable.</p>
+              <p>Something a wise person once told me about typography is:</p>
+              <blockquote>
+                <p>Typography is pretty important if you don't want your stuff to look like trash. Make it good then it won't be
+                  bad.</p>
+              </blockquote>
+              <p>It's probably important that images look okay here by default as well:</p>
+              <figure><img
+                  src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
+                  alt="">
+                <figcaption>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                  Latin literature from 45 BC, making it over 2000 years old.</figcaption>
+              </figure>
+              <p>Now I'm going to show you an example of an unordered list to make sure that looks good, too:</p>
+              <ul>
+                <li>So here is the first item in this list.</li>
+                <li>In this example we're keeping the items short.</li>
+                <li>Later, we'll use longer, more complex list items.</li>
+              </ul>
+              <p>And that's the end of this section.</p>
+              <h2>What if we stack headings?</h2>
+              <h3>We should make sure that looks good, too.</h3>
+              <p>Sometimes you have headings directly underneath each other. In those cases you often have to undo the top margin on
+                the second heading because it usually looks better for the headings to be closer together than a paragraph followed
+                by a heading should be.</p>
+              <h3>When a heading comes after a paragraph …</h3>
+              <p>When a heading comes after a paragraph, we need a bit more space, like I already mentioned above. Now let's see
+                what a more complex list would look like.</p>
+              <ul>
+                <li>
+                  <p><strong>I often do this thing where list items have headings.</strong></p>
+                  <p>For some reason I think this looks cool which is unfortunate because it's pretty annoying to get the styles
+                    right.</p>
+                  <p>I often have two or three paragraphs in these list items, too, so the hard part is getting the spacing between
+                    the paragraphs, list item heading, and separate list items to all make sense. Pretty tough honestly, you could
+                    make a strong argument that you just shouldn't write this way.</p>
+                </li>
+                <li>
+                  <p><strong>Since this is a list, I need at least two items.</strong></p>
+                  <p>I explained what I'm doing already in the previous list item, but a list wouldn't be a list if it only had one
+                    item, and we really want this to look realistic. That's why I've added this second list item so I actually have
+                    something to look at when writing the styles.</p>
+                </li>
+                <li>
+                  <p><strong>It's not a bad idea to add a third item either.</strong></p>
+                  <p>I think it probably would've been fine to just use two items but three is definitely not worse, and since I
+                    seem to be having no trouble making up arbitrary things to type, I might as well include it.</p>
+                </li>
+              </ul>
+              <p>After this sort of list I usually have a closing statement or paragraph, because it kinda looks weird jumping right
+                to a heading.</p>
+              <h2>Code should look okay by default.</h2>
+              <p>I think most people are going to use <a href="https://highlightjs.org/">highlight.js</a> or <a
+                  href="https://prismjs.com/">Prism</a> or something if they want to style their code blocks but it wouldn't hurt to
+                make them look <em>okay</em> out of the box, even with no syntax highlighting.</p>
+              <p>Here's what a default <code>tailwind.config.js</code> file looks like at the time of writing:</p>
+              <pre><code class="language-js">module.exports = {
+              purge: [],
+              theme: {
+                extend: {},
+              },
+              variants: {},
+              plugins: [],
+            }
+            </code></pre>
+              <p>Hopefully that looks good enough to you.</p>
+              <h3>What about nested lists?</h3>
+              <p>Nested lists basically always look bad which is why editors like Medium don't even let you do it, but I guess since
+                some of you goofballs are going to do it we have to carry the burden of at least making it work.</p>
+              <ol>
+                <li><strong>Nested lists are rarely a good idea.</strong>
+                  <ul>
+                    <li>You might feel like you are being really "organized" or something but you are just creating a gross shape on
+                      the screen that is hard to read.</li>
+                    <li>Nested navigation in UIs is a bad idea too, keep things as flat as possible.</li>
+                    <li>Nesting tons of folders in your source code is also not helpful.</li>
+                  </ul>
+                </li>
+                <li><strong>Since we need to have more items, here's another one.</strong>
+                  <ul>
+                    <li>I'm not sure if we'll bother styling more than two levels deep.</li>
+                    <li>Two is already too much, three is guaranteed to be a bad idea.</li>
+                    <li>If you nest four levels deep you belong in prison.</li>
+                  </ul>
+                </li>
+                <li><strong>Two items isn't really a list, three is good though.</strong>
+                  <ul>
+                    <li>Again please don't nest lists if you want people to actually read your content.</li>
+                    <li>Nobody wants to look at this.</li>
+                    <li>I'm upset that we even have to bother styling this.</li>
+                  </ul>
+                </li>
+              </ol>
+              <p>The most annoying thing about lists in Markdown is that <code>&lt;li&gt;</code> elements aren't given a child
+                <code>&lt;p&gt;</code> tag unless there are multiple paragraphs in the list item. That means I have to worry about
+                styling that annoying situation too.</p>
+              <ul>
+                <li>
+                  <p><strong>For example, here's another nested list.</strong></p>
+                  <p>But this time with a second paragraph.</p>
+                  <ul>
+                    <li>These list items won't have <code>&lt;p&gt;</code> tags</li>
+                    <li>Because they are only one line each</li>
+                  </ul>
+                </li>
+                <li>
+                  <p><strong>But in this second top-level list item, they will.</strong></p>
+                  <p>This is especially annoying because of the spacing on this paragraph.</p>
+                  <ul>
+                    <li>
+                      <p>As you can see here, because I've added a second line, this list item now has a <code>&lt;p&gt;</code> tag.
+                      </p>
+                      <p>This is the second line I'm talking about by the way.</p>
+                    </li>
+                    <li>
+                      <p>Finally here's another list item so it's more like a list.</p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>A closing list item, but with no nested list, because why not?</p>
+                </li>
+              </ul>
+              <p>And finally a sentence to close off this section.</p>
+              <h2>There are other elements we need to style</h2>
+              <p>I almost forgot to mention links, like <a href="https://tailwindcss.com">this link to the Tailwind CSS website</a>.
+                We almost made them blue but that's so yesterday, so we went with dark gray, feels edgier.</p>
+              <p>We even included table styles, check it out:</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Wrestler</th>
+                    <th>Origin</th>
+                    <th>Finisher</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Bret "The Hitman" Hart</td>
+                    <td>Calgary, AB</td>
+                    <td>Sharpshooter</td>
+                  </tr>
+                  <tr>
+                    <td>Stone Cold Steve Austin</td>
+                    <td>Austin, TX</td>
+                    <td>Stone Cold Stunner</td>
+                  </tr>
+                  <tr>
+                    <td>Randy Savage</td>
+                    <td>Sarasota, FL</td>
+                    <td>Elbow Drop</td>
+                  </tr>
+                  <tr>
+                    <td>Vader</td>
+                    <td>Boulder, CO</td>
+                    <td>Vader Bomb</td>
+                  </tr>
+                  <tr>
+                    <td>Razor Ramon</td>
+                    <td>Chuluota, FL</td>
+                    <td>Razor's Edge</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>We also need to make sure inline code looks good, like if I wanted to talk about <code>&lt;span&gt;</code> elements
+                or tell you the good news about <code>@tailwindcss/typography</code>.</p>
+              <h3>Sometimes I even use <code>code</code> in headings</h3>
+              <p>Even though it's probably a bad idea, and historically I've had a hard time making it look good. This <em>"wrap the
+                  code blocks in backticks"</em> trick works pretty well though really.</p>
+              <p>Another thing I've done in the past is put a <code>code</code> tag inside of a link, like if I wanted to tell you
+                about the <a href="https://github.com/tailwindcss/docs"><code>tailwindcss/docs</code></a> repository. I don't love
+                that there is an underline below the backticks but it is absolutely not worth the madness it would require to avoid
+                it.</p>
+              <h4>We haven't used an <code>h4</code> yet</h4>
+              <p>But now we have. Please don't use <code>h5</code> or <code>h6</code> in your content, Medium only supports two
+                heading levels for a reason, you animals. I honestly considered using a <code>before</code> pseudo-element to scream
+                at you if you use an <code>h5</code> or <code>h6</code>.</p>
+              <p>We don't style them at all out of the box because <code>h4</code> elements are already so small that they are the
+                same size as the body copy. What are we supposed to do with an <code>h5</code>, make it <em>smaller</em> than the
+                body copy? No thanks.</p>
+              <h3>We still need to think about stacked headings though.</h3>
+              <h4>Let's make sure we don't screw that up with <code>h4</code> elements, either.</h4>
+              <p>Phew, with any luck we have styled the headings above this text and they look pretty good.</p>
+              <p>Let's add a closing paragraph here so things end with a decently sized block of text. I can't explain why I want
+                things to end that way but I have to assume it's because I think things will look weird or unbalanced if there is a
+                heading too close to the end of the document.</p>
+              <p>What I've written here is probably long enough, but adding this final sentence can't hurt.</p>
+            </div>
+          </div>
+      </div>
+
+
 
     <!-- footer/newsletter -->
+    <div class="relative py-24 bg-gradient-to-br from-gray-100 to-gray-300 text-gray-600">
+      <!--circles-->
+      <div class="absolute top-0 left-0 transform translate-y-6 translate-x-6">
+        <div class="absolute w-24 h-24 rounded-full bg-gradient-to-br from-teal-100 to-teal-200 opacity-50"></div>
+        <div class="absolute w-24 h-24 rounded-full bg-gradient-to-br from-purple-100 to-purple-200 opacity-50 ml-12"></div>
+        <div class="absolute w-24 h-24 rounded-full bg-gradient-to-br from-red-100 to-red-200 opacity-50 ml-6 mt-12"></div>
+      </div>
 
+      <div class="relative container mx-auto px-10">
+        <!-- top -->
+        <div class="lg:flex justify-between space-y-12 lg:space-y-0">
+          <!-- newsletter -->
+          <div class="flex flex-col justify-center">
+            <h4 class="mb-4 font-bold text-2xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500">Get updates on this course</h4>
+            <form action="#" method="POST" class="flex">
+              <input type="email" name="email" placeholder="super@secret.com" class="w-full p-3 rounded-l outline-none border-2 border-r-0 border-gray-400 focus:border-purple-400 placeholder-gray-300" />
+              <button class="p-3 bg-purple-400 text-purple-100 rounded-r">Subscribe</button>
+            </form>
+          </div>
+          <!--links-->
+          <div class="text-center lg:text-right md:flex md:justify-center md:space-x-8 space-y-8 md:space-y-0">
+            <div class="space-y-2">
+              <p class="mb-3 font-bold text-gray-400 uppercase tracking-wider">Company Links</p>
+              <a href="#" class="block hover:text-gray-800 hover:underline">About</a>
+              <a href="#" class="block hover:text-gray-800 hover:underline">Blog</a>
+              <a href="#" class="block hover:text-gray-800 hover:underline">Careers</a>
+              <a href="#" class="block hover:text-gray-800 hover:underline">Spare</a>
+            </div>
+            <div class="space-y-2">
+              <p class="mb-3 font-bold text-gray-400 uppercase tracking-wider">Company Links</p>
+              <a href="#" class="block hover:text-gray-800 hover:underline">About</a>
+              <a href="#" class="block hover:text-gray-800 hover:underline">Blog</a>
+              <a href="#" class="block hover:text-gray-800 hover:underline">Careers</a>
+              <a href="#" class="block hover:text-gray-800 hover:underline">Spare</a>
+            </div>
+            <div class="space-y-2">
+              <p class="mb-3 font-bold text-gray-400 uppercase tracking-wider">Company Links</p>
+              <a href="#" class="block hover:text-gray-800 hover:underline">About</a>
+              <a href="#" class="block hover:text-gray-800 hover:underline">Blog</a>
+              <a href="#" class="block hover:text-gray-800 hover:underline">Careers</a>
+              <a href="#" class="block hover:text-gray-800 hover:underline">Spare</a>
+            </div>
+          </div>
+        </div>
+
+        <!--bottom-->
+        <div class="pt-4 mt-16 md:flex justify-between border-t border-gray-300 text-sm text-center md:text-left space-y-4 md:space-y-0">
+          <!--copyright-->
+          <div>
+            Copyright &copy; 2020-4056
+          </div>
+          <!--links-->
+          <div class="space-x-4">
+            <a href="#">Discord</a>
+            <a href="#">Twitter</a>
+            <a href="#">YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="index.js"></script>
   </body>
